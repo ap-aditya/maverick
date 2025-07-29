@@ -2,6 +2,8 @@ from typing import Optional, List, Dict
 from sqlmodel import Field, SQLModel
 from pydantic.v1 import BaseModel
 import datetime
+def get_utc_now():
+    return datetime.datetime.now(datetime.UTC)
 
 
 class UserProfile(SQLModel, table=True):
@@ -18,7 +20,7 @@ class UserProfile(SQLModel, table=True):
 class Job(SQLModel, table=True):
     __tablename__ = "jobs"
     id: Optional[int] = Field(default=None, primary_key=True, index=True)
-    date_found: datetime.datetime = Field(default_factory=lambda: datetime.now(datetime.timezone.utc), nullable=False)
+    date_found: datetime.datetime = Field(default_factory=lambda: datetime.datetime.now(datetime.timezone.utc), nullable=False)
     title: str
     company: str
     location: Optional[str] = None
