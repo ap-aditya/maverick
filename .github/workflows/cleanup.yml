@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       force_cleanup:
-        description: 'Force cleanup even if recent'
+        description: 'Cleanup of stale jobs'
         required: false
         default: false
         type: boolean
@@ -27,14 +27,14 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies with uv
-        working-directory: ./agent
+        working-directory: ./agents
         run: |
           python -m pip install --upgrade pip
           pip install uv
           uv sync --ci
 
       - name: Run Database Cleanup
-        working-directory: ./agent
+        working-directory: ./agents
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
