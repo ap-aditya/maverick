@@ -27,11 +27,11 @@ jobs:
 
       - name: Install Playwright browsers
         working-directory: ./agents
-        run: playwright install chromium
+        run: uv run playwright install chromium
 
       - name: Run JobBot Agent
         working-directory: ./agents
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: python main.py
+        run: uv run main.py
