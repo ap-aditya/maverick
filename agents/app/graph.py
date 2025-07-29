@@ -5,9 +5,10 @@ from .agent_nodes import (
     initialize_agent,
     get_next_target,
     navigate_to_page,
-    analyze_page,
-    filter_new_jobs,
-    analyze_job_fit,
+    extract_job_urls,
+    finalize_target_urls,
+    aggregate_and_filter_urls,
+    deep_job_analysis,
     save_jobs_to_db,
     prepare_for_next_page
 )
@@ -18,8 +19,9 @@ class AgentState(TypedDict):
     current_target: str
     current_page_url: str
     page_content: str
-    job_listings: List[JobListing]
-    unique_job_listings: List[JobListing]
+    all_collected_urls: set
+    current_target_urls: set
+    filtered_job_urls: List[str]
     processed_jobs: List[Job]
     next_page_url: Optional[str]
     user_profile: Optional[UserProfile]
@@ -33,9 +35,10 @@ def create_workflow():
     workflow.add_node("initialize_agent", initialize_agent)
     workflow.add_node("get_next_target", get_next_target)
     workflow.add_node("navigate_to_page", navigate_to_page)
-    workflow.add_node("analyze_page", analyze_page)
-    workflow.add_node("filter_new_jobs", filter_new_jobs)
-    workflow.add_node("analyze_job_fit", analyze_job_fit)
+    workflow.add_node("extract_job_urls", extract_job_urls)
+    workflow.add_node("finalize_target_urls", finalize_target_urls)
+    workflow.add_node("aggregate_and_filter_urls", aggregate_and_filter_urls)
+    workflow.add_node("deep_job_analysis", deep_job_analysis)
     workflow.add_node("save_jobs_to_db", save_jobs_to_db)
     workflow.add_node("prepare_for_next_page", prepare_for_next_page)
 
@@ -45,7 +48,7 @@ def create_workflow():
         if state["current_target"]:
             return "navigate_to_page"
         else:
-            return END
+            return "aggregate_and_filter_urls"
 
     def should_paginate(state):
         next_url = state.get("next_page_url")
@@ -67,28 +70,25 @@ def create_workflow():
         
         if not next_url:
             print(f"📄 Pagination complete for target")
-            return "get_next_target"
+            return "finalize_target_urls"
         
         if pages_done >= max_pages:
             print(f"📄 Page limit reached ({max_pages}) for target")
-            return "get_next_target"
-        
-        stats = state.get("target_stats", {})
-        recent_job_counts = stats.get("recent_job_counts", [])
-        if len(recent_job_counts) >= 2 and sum(recent_job_counts[-2:]) == 0:
-            print(f"📄 Early termination: No new jobs in recent pages")
-            return "get_next_target"
+            return "finalize_target_urls"
         
         print(f"📄 Continuing pagination ({pages_done}/{max_pages})")
         return "prepare_for_next_page"
 
     workflow.set_entry_point("initialize_agent")
     
-    workflow.add_edge("navigate_to_page", "analyze_page")
-    workflow.add_edge("analyze_page", "filter_new_jobs") 
-    workflow.add_edge("filter_new_jobs", "analyze_job_fit")
-    workflow.add_edge("analyze_job_fit", "save_jobs_to_db")
+    workflow.add_edge("navigate_to_page", "extract_job_urls")
     workflow.add_edge("prepare_for_next_page", "navigate_to_page")
+    workflow.add_edge("finalize_target_urls", "get_next_target")
+    
+    workflow.add_edge("aggregate_and_filter_urls", "deep_job_analysis")
+    
+    workflow.add_edge("deep_job_analysis", "save_jobs_to_db")
+    workflow.add_edge("save_jobs_to_db", END)
     
     workflow.add_conditional_edges(
         "initialize_agent",
@@ -97,18 +97,21 @@ def create_workflow():
     )
 
     workflow.add_conditional_edges(
-        "save_jobs_to_db",
+        "extract_job_urls",
         should_paginate,
         {
             "prepare_for_next_page": "prepare_for_next_page", 
-            "get_next_target": "get_next_target"
+            "finalize_target_urls": "finalize_target_urls"
         }
     )
     
     workflow.add_conditional_edges(
         "get_next_target",
         should_continue_to_next_company,
-        {"navigate_to_page": "navigate_to_page", END: END}
+        {
+            "navigate_to_page": "navigate_to_page", 
+            "aggregate_and_filter_urls": "aggregate_and_filter_urls"
+        }
     )
     
     return workflow.compile()
