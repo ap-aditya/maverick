@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { db } from "@/lib/db";
 import { jobs, applications } from "@/lib/schema";
 import { AnalyticsClient } from "@/components/analytics/AnalyticsClient";

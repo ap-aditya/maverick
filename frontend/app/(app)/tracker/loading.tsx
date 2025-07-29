@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
 
