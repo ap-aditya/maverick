@@ -1,0 +1,33 @@
+{
+  "target_urls": [
+    "https://www.amazon.jobs/content/en/career-programs/university?country%5B%5D=IN",
+    "https://www.google.com/about/careers/applications/jobs/results/?category=DATA_CENTER_OPERATIONS&category=DEVELOPER_RELATIONS&category=HARDWARE_ENGINEERING&category=INFORMATION_TECHNOLOGY&category=MANUFACTURING_SUPPLY_CHAIN&category=NETWORK_ENGINEERING&category=PRODUCT_MANAGEMENT&category=PROGRAM_MANAGEMENT&category=SOFTWARE_ENGINEERING&category=TECHNICAL_INFRASTRUCTURE_ENGINEERING&category=TECHNICAL_SOLUTIONS&category=TECHNICAL_WRITING&category=USER_EXPERIENCE&jex=ENTRY_LEVEL&location=India&target_level=INTERN_AND_APPRENTICE&target_level=EARLY&degree=BACHELORS&degree=PURSUING_DEGREE&employment_type=INTERN&employment_type=FULL_TIME&employment_type=PART_TIME&employment_type=TEMPORARY",
+    "https://www.metacareers.com/jobs?teams[0]=University%20Grad%20-%20Business&teams[1]=University%20Grad%20-%20Engineering%2C%20Tech%20%26%20Design&teams[2]=University%20Grad%20-%20PhD%20%26%20Postdoc&offices[0]=Bangalore%2C%20India&offices[1]=Gurgaon%2C%20India&offices[2]=Hyderabad%2C%20India&offices[3]=Mumbai%2C%20India&offices[4]=New%20Delhi%2C%20India",
+    "https://jobs.apple.com/en-in/search?location=india-INDC&team=internships-STDNT-INTRN+corporate-STDNT-CORP",
+    "https://jobs.careers.microsoft.com/global/en/search?p=Software%20Engineering&exp=Students%20and%20graduates&l=en_us&pg=1&pgSz=20&o=Relevance&flt=true",
+    "https://www.atlassian.com/company/careers/all-jobs?team=Interns%2CGraduates&location=India%2CAustralia&search=",
+    "https://www.ycombinator.com/jobs/role/software-engineer",
+    "https://careers.adobe.com/us/en/search-results?qkexperienceLevel=University%20Graduate",
+    "https://careers.adobe.com/us/en/search-results?qkexperienceLevel=University%20Intern",
+    "https://www.uber.com/in/en/careers/list/?department=University&location=IND-Karnataka-Bangalore&location=IND-Telangana-Hyderabad&location=IND-Haryana-Gurgaon&location=IND-Andhra%20Pradesh-Visakhapatnam&team=Engineering&team=Data%20Science",
+    "https://www.accenture.com/us-en/careers/jobsearch?aoi=Software%20Engineering%7CCloud%7CEngineering%20%26%20Manufacturing&et=Full-time&jt=Early%20Career",
+    "https://www.ibm.com/in-en/careers/search?field_keyword_08[0]=Software%20Engineering&field_keyword_08[1]=Data%20%26%20Analytics&field_keyword_18[0]=Internship&field_keyword_05[0]=India",
+    "https://www.ibm.com/in-en/careers/search?field_keyword_08[0]=Software%20Engineering&field_keyword_08[1]=Data%20%26%20Analytics&field_keyword_18[0]=Entry%20Level&field_keyword_05[0]=India",
+    "https://wellfound.com/role/r/software-engineer",
+    "https://startup.jobs/?c=Internship&remote=true",
+    "https://builtin.com/jobs/dev-engineering/internship/entry-level?skills=Node.js%2CDocker%2CPostgres%2CNext.Js%2CMongoDB%2CTypescript%2CC%2B%2B%2CPython%2CJavaScript%2CGCP%2CSQL%2CCSS%2CHTML%2CGit%2CReact&country=IND&allLocations=true",
+    "https://www.dice.com/jobs?filters.employmentType=FULLTIME%7CPARTTIME&filters.workplaceTypes=Remote&location=India&countryCode=IN&locationPrecision=Country",
+    "https://www.naukri.com/software-engineer-jobs?experience[]=0&experience[]=1&cityCode[]=Bangalore&cityCode[]=Hyderabad",
+    "https://www.shine.com/job-search/software-engineer-jobs?experienceRange=0-2&location=Bangalore",
+    "https://www.tcs.com/careers/tcs-national-qualifier-test",
+    "https://www.infosys.com/careers/graduates/programs.html",
+    "https://careers.wipro.com/careers-for-freshers",
+    "https://careers.zomato.com/jobs?department=Engineering&experience=Fresher",
+    "https://careers.swiggy.com/jobs?department=Engineering&experience=0-2%20years",
+    "https://razorpay.com/jobs/?team=engineering&experience=0-2",
+    "https://careers.flipkart.com/campus-hiring",
+    "https://careers.paytm.com/jobs?department=Engineering&experience=entry-level",
+    "https://www.byju.com/careers/engineering",
+    "https://careers.ola.com/jobs?department=Engineering"
+  ]
+}
