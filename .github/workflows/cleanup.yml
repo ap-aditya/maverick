@@ -39,5 +39,5 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           echo "🧹 Starting database cleanup at $(date)"
-          uv run cleanup_old_data.py
+          uv run cleanup.py
           echo "✅ Database cleanup completed at $(date)"

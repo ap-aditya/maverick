@@ -1,11 +1,5 @@
 {
   "target_urls": [
-    "https://www.amazon.jobs/content/en/career-programs/university?country%5B%5D=IN",
-    "https://www.google.com/about/careers/applications/jobs/results/?category=DATA_CENTER_OPERATIONS&category=DEVELOPER_RELATIONS&category=HARDWARE_ENGINEERING&category=INFORMATION_TECHNOLOGY&category=MANUFACTURING_SUPPLY_CHAIN&category=NETWORK_ENGINEERING&category=PRODUCT_MANAGEMENT&category=PROGRAM_MANAGEMENT&category=SOFTWARE_ENGINEERING&category=TECHNICAL_INFRASTRUCTURE_ENGINEERING&category=TECHNICAL_SOLUTIONS&category=TECHNICAL_WRITING&category=USER_EXPERIENCE&jex=ENTRY_LEVEL&location=India&target_level=INTERN_AND_APPRENTICE&target_level=EARLY&degree=BACHELORS&degree=PURSUING_DEGREE&employment_type=INTERN&employment_type=FULL_TIME&employment_type=PART_TIME&employment_type=TEMPORARY",
-    "https://www.metacareers.com/jobs?teams[0]=University%20Grad%20-%20Business&teams[1]=University%20Grad%20-%20Engineering%2C%20Tech%20%26%20Design&teams[2]=University%20Grad%20-%20PhD%20%26%20Postdoc&offices[0]=Bangalore%2C%20India&offices[1]=Gurgaon%2C%20India&offices[2]=Hyderabad%2C%20India&offices[3]=Mumbai%2C%20India&offices[4]=New%20Delhi%2C%20India",
-    "https://jobs.apple.com/en-in/search?location=india-INDC&team=internships-STDNT-INTRN+corporate-STDNT-CORP",
-    "https://jobs.careers.microsoft.com/global/en/search?p=Software%20Engineering&exp=Students%20and%20graduates&l=en_us&pg=1&pgSz=20&o=Relevance&flt=true",
-    "https://www.atlassian.com/company/careers/all-jobs?team=Interns%2CGraduates&location=India%2CAustralia&search=",
     "https://www.ycombinator.com/jobs/role/software-engineer",
     "https://careers.adobe.com/us/en/search-results?qkexperienceLevel=University%20Graduate",
     "https://careers.adobe.com/us/en/search-results?qkexperienceLevel=University%20Intern",
@@ -28,6 +22,14 @@
     "https://careers.flipkart.com/campus-hiring",
     "https://careers.paytm.com/jobs?department=Engineering&experience=entry-level",
     "https://www.byju.com/careers/engineering",
-    "https://careers.ola.com/jobs?department=Engineering"
+    "https://careers.ola.com/jobs?department=Engineering",
+    "https://www.google.com/about/careers/applications/jobs/results/?category=DATA_CENTER_OPERATIONS&category=DEVELOPER_RELATIONS&category=HARDWARE_ENGINEERING&category=INFORMATION_TECHNOLOGY&category=MANUFACTURING_SUPPLY_CHAIN&category=NETWORK_ENGINEERING&category=PRODUCT_MANAGEMENT&category=PROGRAM_MANAGEMENT&category=SOFTWARE_ENGINEERING&category=TECHNICAL_INFRASTRUCTURE_ENGINEERING&category=TECHNICAL_SOLUTIONS&category=TECHNICAL_WRITING&category=USER_EXPERIENCE&jex=ENTRY_LEVEL&location=India&target_level=INTERN_AND_APPRENTICE&target_level=EARLY&degree=BACHELORS&degree=PURSUING_DEGREE&employment_type=INTERN&employment_type=FULL_TIME&employment_type=PART_TIME&employment_type=TEMPORARY",
+    "https://www.metacareers.com/jobs?teams[0]=University%20Grad%20-%20Business&teams[1]=University%20Grad%20-%20Engineering%2C%20Tech%20%26%20Design&teams[2]=University%20Grad%20-%20PhD%20%26%20Postdoc&offices[0]=Bangalore%2C%20India&offices[1]=Gurgaon%2C%20India&offices[2]=Hyderabad%2C%20India&offices[3]=Mumbai%2C%20India&offices[4]=New%20Delhi%2C%20India",
+    "https://jobs.apple.com/en-in/search?location=india-INDC&team=internships-STDNT-INTRN+corporate-STDNT-CORP",
+    "https://jobs.careers.microsoft.com/global/en/search?p=Software%20Engineering&exp=Students%20and%20graduates&l=en_us&pg=1&pgSz=20&o=Relevance&flt=true",
+    "https://www.atlassian.com/company/careers/all-jobs?team=Interns%2CGraduates&location=India%2CAustralia&search=",
+    "https://www.ycombinator.com/jobs/role/software-engineer",
+    "https://www.dice.com/jobs?filters.employmentType=FULLTIME%7CPARTTIME&filters.workplaceTypes=Remote&location=India&countryCode=IN&locationPrecision=Country",
+    "https://www.naukri.com/software-engineer-jobs?experience[]=0&experience[]=1&cityCode[]=Bangalore&cityCode[]=Hyderabad"
   ]
 }
